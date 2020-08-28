@@ -6,6 +6,6 @@
 			<class name="com.webapp.runner.TestRunner"></class>
 		</classes>
 	</test> <!-- Test -->
-	<listeners><listener class-name="com.webapp.listeners.ITestListenersImpl"></listener></listeners>
+	<listeners><listener class-name="com.webapp.utility.ITestListenersImpl"></listener></listeners>
 
 </suite> <!-- Suite -->

@@ -14,7 +14,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class FunctionLibrary {
+public class FunctionLibrary extends ExtentReportListener{
 
 	public static Properties prop;
 

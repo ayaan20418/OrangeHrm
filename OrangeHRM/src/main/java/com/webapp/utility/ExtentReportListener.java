@@ -1,10 +1,12 @@
-package com.webapp.listeners;
+package com.webapp.utility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.gherkin.model.Feature;
+import com.aventstack.extentreports.gherkin.model.Scenario;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -62,5 +64,18 @@ public class ExtentReportListener  {
 		}
 		
 	}
-
+	
+	//template
+	
+/*	ExtentTest logInfo=null;
+	
+	try {
+		test=extent.createTest(Feature.class,"feaature name");
+		test=test.createNode(Scenario.class,"scenario name");
+		logInfo=test.createNode(new Gherkinkeyword("Given"),"");
+	}
+	
+	catch(AssertionError | Exception e){
+	teststepHandle("FAIL",driver,logInfo,e);
+	}*/
 }

@@ -1,4 +1,4 @@
-package com.webapp.listeners;
+package com.webapp.utility;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestContext;
@@ -8,11 +8,6 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 
 public class ITestListenersImpl extends ExtentReportListener implements ITestListener {
-	public ITestListenersImpl() {
-
-		PageFactory.initElements(driver, this);
-		
-	}
 	
 	private static ExtentReports extent;
 	
