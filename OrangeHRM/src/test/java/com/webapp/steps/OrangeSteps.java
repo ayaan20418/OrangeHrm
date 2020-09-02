@@ -20,24 +20,22 @@ public class OrangeSteps extends FunctionLibrary  {
 	LoginPage login;
 
 	static HomePage home;
+	ExtentTest logInfo;
+
 
 	@Given("the user launches the url")
-	public void the_user_launches_the_url() {
-		
-		ExtentTest logInfo=null;
+	public void the_user_launches_the_url() throws Throwable {
 		
 		try {
 			
 			test=extent.createTest(Feature.class,"Validate employee details from employee List");
 			test=test.createNode(Scenario.class,"Select the Employee List");
 			logInfo=test.createNode(new GherkinKeyword("Given"),"the_user_launches_the_url");
+			
 			FunctionLibrary.browserFactory();
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-			
 			logInfo.pass("the user launches the url");
-
 		}
-		
 		catch(AssertionError | Exception e){
 		teststepHandle("FAIL",driver,logInfo,e);
 		}
@@ -45,8 +43,7 @@ public class OrangeSteps extends FunctionLibrary  {
 		
 	}
 	@When("User click login option")
-	public void User_click_login_option() {
-		ExtentTest logInfo=null;
+	public void User_click_login_option() throws Throwable{
 		
 		try {
 			
@@ -64,23 +61,17 @@ public class OrangeSteps extends FunctionLibrary  {
 	}
 	
 	@Then("login with differrent user1")
-	public void login_with_differrent_user1() {
-		ExtentTest logInfo=null;
-		
+	public void login_with_differrent_user1() throws Throwable{
 		try {
 			logInfo=test.createNode(new GherkinKeyword("Then"),"login_with_differrent_user1");
 			
 			login = new LoginPage();
 			login.getdiff_role1();
-			
 			logInfo.pass("login with differrent user1");
-			
 		}
-		
 		catch(AssertionError | Exception e){
 		teststepHandle("FAIL",driver,logInfo,e);
 		}
-		
 	}
 	@Then("login with differrent user2")
 	public void login_with_differrent_user2() {
@@ -111,8 +102,7 @@ public class OrangeSteps extends FunctionLibrary  {
 			
 	}
 	  @Then("Enter the PIM Option")
-	  public void Enter_the_PIM_Option() {
-		  ExtentTest logInfo=null;
+	  public void Enter_the_PIM_Option() throws Throwable{
 			
 			try {
 				
@@ -127,9 +117,8 @@ public class OrangeSteps extends FunctionLibrary  {
 			}
 		
 	}
-	   @And ("Click the Employee List")
-	   public void And_Click_the_Employee_List() {
-		   ExtentTest logInfo=null;
+	   @And ("Click the Employee List") 
+	   public void And_Click_the_Employee_List() throws Throwable{
 			
 			try {
 			
@@ -146,8 +135,7 @@ public class OrangeSteps extends FunctionLibrary  {
 
 	}
 	  @ Then("Get particular Employee Details")
-	   public void Get_particular_Employee_Details() {
-		  ExtentTest logInfo=null;
+	   public void Get_particular_Employee_Details()throws Throwable {
 			
 			try {
 				
@@ -161,12 +149,5 @@ public class OrangeSteps extends FunctionLibrary  {
 			catch(AssertionError | Exception e){
 			teststepHandle("FAIL",driver,logInfo,e);
 			}
-		 
-
 	}
-
-
-
-
-
 }

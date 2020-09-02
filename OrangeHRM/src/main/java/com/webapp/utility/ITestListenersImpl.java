@@ -7,7 +7,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 
-public class ITestListenersImpl extends ExtentReportListener implements ITestListener {
+public class ITestListenersImpl extends FunctionLibrary implements ITestListener {
 	
 	private static ExtentReports extent;
 	

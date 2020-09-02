@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="com.webapp.listeners.ITestListenersImpl"/>
+    <listener class-name="com.webapp.utility.ITestListenersImpl"/>
   </listeners>
   <test name="Test(failed)">
     <classes>
